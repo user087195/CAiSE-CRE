@@ -2,7 +2,7 @@
 
 In this repository you will find the prompts used for the extraction from the papers and the post-processing and evaluation scripts.
 
-## Evaluation results
+## Overall extraction results
 
 | Stage | Modality | Prec. | Recall | F1 | Prec. | Recall | F1 |
 |-------|----------|-------|--------|-------|-------|--------|-------|
@@ -30,3 +30,33 @@ In this repository you will find the prompts used for the extraction from the pa
 | **5-tuple** | Text | 0.5854 | 0.2442 | 0.3447 | 0.5359 | 0.3778 | 0.4432 |
 |  | Image | 0.3628 | 0.2327 | 0.2836 | 0.4341 | 0.2588 | 0.3243 |
 |  | Both | 0.4197 | 0.3571 | 0.3859 | 0.5017 | 0.4851 | 0.4933 |
+
+
+## MLLM and computer vision comparison
+
+| Stage | Modality | Precision | Recall | F1 | Precision | Recall | F1 |
+|-------|----------|-----------|--------|-------|-----------|--------|-------|
+| | | Basket of Eight | | | PubMed | | |
+| **3-tuple** | MLLM | 0.4279 | 0.414 | 0.4208 | 0.4653 | 0.4631 | 0.4642 |
+|  | MLLM + Text | 0.4311 | 0.4885 | 0.458 | 0.4496 | 0.5526 | 0.4958 |
+|  | CV+Text | 0.4867 | 0.4327 | 0.4581 | 0.5644 | 0.5432 | 0.5536 |
+| **4-tuple** | MLLM | 0.3431 | 0.3209 | 0.3316 | 0.3951 | 0.3824 | 0.3886 |
+|  | MLLM + Text | 0.3502 | 0.3837 | 0.3662 | 0.3885 | 0.4813 | 0.43 |
+|  | CV+Text | 0.4113 | 0.3532 | 0.3801 | 0.4859 | 0.4692 | 0.4774 |
+| **5-tuple** | MLLM | 0.238 | 0.2209 | 0.2291 | 0.2775 | 0.2663 | 0.2718 |
+|  | MLLM + Text | 0.2576 | 0.2802 | 0.2684 | 0.3023 | 0.3755 | 0.3349 |
+|  | CV+Text | 0.3526 | 0.277 | 0.2993 | 0.4248 | 0.4108 | 0.4177 |
+
+
+## Method of combining relations
+
+| Stage | Method | Prec. | Recall | F1 | Prec. | Recall | F1 |
+|-------|----------------|-------|--------|-------|-------|--------|-------|
+| | | Basket of Eight | | | PubMed | | |
+| **3-tuple** | Simple Concat | 0.612 | 0.5932 | 0.6025 | 0.595 | 0.6389 | 0.6162 |
+|  | LLM | 0.6069 | 0.5649 | 0.5852 | 0.616 | 0.6295 | 0.6227 |
+| **4-tuple** | Simple Concat | 0.496 | 0.4628 | 0.4788 | 0.496 | 0.5308 | 0.5128 |
+|  | LLM | 0.4851 | 0.453 | 0.4685 | 0.5238 | 0.5516 | 0.5374 |
+| **5-tuple** | Simple Concat | 0.3815 | 0.3521 | 0.3662 | 0.4208 | 0.4503 | 0.435 |
+|  | LLM | 0.3431 | 0.3265 | 0.3346 | 0.4196 | 0.4582 | 0.438 |
+
