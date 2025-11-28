@@ -6,7 +6,8 @@ In this repository you will find the prompts used for the extraction from the pa
 
 | Stage | Modality | Prec. | Recall | F1 | Prec. | Recall | F1 |
 |-------|----------|-------|--------|-------|-------|--------|-------|
-| **Basket of Eight – PubMed Automated Evaluation** | | | | | | | |
+| | | Basket of Eight | | | PubMed | | |
+| **Automated Evaluation** | | | | | | | |
 | **3-tuple** | Text | 0.5148 | 0.2329 | 0.3207 | 0.5229 | 0.3579 | 0.425 |
 |  | Image | 0.497 | 0.3339 | 0.3994 | 0.6388 | 0.4082 | 0.4981 |
 |  | Both | 0.4867 | 0.4327 | 0.4581 | 0.5644 | 0.5432 | 0.5536 |
